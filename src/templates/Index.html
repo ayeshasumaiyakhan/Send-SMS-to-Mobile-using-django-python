@@ -1,0 +1,28 @@
+{% extends "base_generic.html" %}
+{% block content %}
+  <div class="container">
+    <div class="jumbotron">
+      <h4> SMS</h4>
+        <h1>Contact Form:</h1>
+           <form method="POST" action="{% url 'Index' %}">
+             {% csrf_token %}
+             <div class="form-group">
+               <label for="exampleInputEmail1">Name</label>
+               <input type="text" class="form-control" name="name"id="exampleInputEmail1" aria-describedby="emailHelp">
+             </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Phone Number</label>
+    <input type="password" class="form-control" name="phonenumber"id="exampleInputEmail1" aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Message</label>
+    <input type="text" class="form-control" name="message" id="exampleInputPassword1">
+  </div>
+
+  <button type="submit" class="btn btn-primary" name="" value="Save" >Submit</button>
+</form>
+    </div>
+    </div>
+
+     {% endblock %}
